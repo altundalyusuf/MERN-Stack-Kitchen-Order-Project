@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body > #root > div > #home-page-container {
+  height: 100vh;
+}
+
+@media screen and (min-width: 580px) {
+  #home-page-container{
+    background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
+    background-position:left top;
+    background-size:12em;
+    background-repeat:no-repeat;
+    background-color:antiquewhite;
+    
+  }
+}  
+
+@media screen and (max-width: 580px ) {
+  #home-page-container{
+    background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
+    background-position:left top;
+    background-size:8em;
+    background-repeat:no-repeat;
+    background-color:antiquewhite;
+    
+  }
+}
+
+#order-button{
+  width: 100%;
+}
+
+.meeting-rooms:hover{
+  background-color: #14A44D;
+  color: white;
+  
+}
+
+.meeting-rooms{
+  
+  background-color:thistle;
+  color: black;
+  font-family:'Times New Roman', Times, serif ;
+  
+}
+
+@media screen and (max-width: 580px ) {
+  #give-order{
+    height: 100vh;
+    background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
+    background-position:left bottom;
+    background-size:8em;
+    background-repeat:no-repeat;
+    background-color:antiquewhite;
+    
+  }
+
+}
+@media screen and (min-width: 580px) {
+  #give-order{
+    height: 100vh;
+    background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
+    background-position:left bottom;
+    background-size:12em;
+    background-repeat:no-repeat;
+    background-color:antiquewhite;
+  }
+}  
+
+#order-list-item{
+  background-color:thistle;
+  color: black;
+}
+
+#order-list-item:hover{
+  background-color: #14A44D;
+  color: white;
+}
+
+@media screen and (max-width: 995px) {
+  .responsive-text{
+    font-size:150%;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 992px) {
+  .responsive-text{
+    font-size:150%;
+  }
+}
+
+@media screen and (min-width:576px) and (max-width: 767px) {
+  .responsive-text{
+    font-size:110%;
+  }
+}
