@@ -64,58 +64,55 @@ function GiveOrder() {
             {/* Sipariş seçim alanı */}
             <MDBContainer breakpoint="md">
                 <MDBRow >
-                    <MDBCol size='md-4'>
-                        <MDBRow className=''>
-                            <MDBCol size='md-8'>
-                                <img
-                                    src='https://www.foodandwine.com/thmb/6wTm7a0y87X97LK-ZMxe2787kI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/different-types-of-tea-FT-BLOG0621-7c7fd231e66d4fea8ca9a47cad52ba79.jpg'
-                                    className='img-thumbnail thumbnails'
-                                    alt='tea'
-                                />
+                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
+                        <MDBCol size='md-8' className='mb-2'>
+                            <img
+                                src='https://www.foodandwine.com/thmb/6wTm7a0y87X97LK-ZMxe2787kI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/different-types-of-tea-FT-BLOG0621-7c7fd231e66d4fea8ca9a47cad52ba79.jpg'
+                                className='img-thumbnail thumbnails'
+                                alt='tea'
+                            />
+                        </MDBCol>
 
-
-                            </MDBCol>
-                            <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
-                                <FormGroup>
-                                    <Input
-                                        id="exampleSelect"
-                                        name="select"
-                                        type="select"
-                                    >
-                                        <option>
-                                            1
-                                        </option>
-                                        <option>
-                                            2
-                                        </option>
-                                        <option>
-                                            3
-                                        </option>
-                                        <option>
-                                            4
-                                        </option>
-                                        <option>
-                                            5
-                                        </option>
-                                        <option>
-                                            6
-                                        </option>
-                                        <option>
-                                            7
-                                        </option>
-                                        <option>
-                                            8
-                                        </option>
-                                        <option>
-                                            9
-                                        </option>
-                                        <option>
-                                            10
-                                        </option>
-                                    </Input>
-                                </FormGroup>
-                            </MDBCol>
-                        </MDBRow>
+                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                            <FormGroup>
+                                <Input
+                                    id="exampleSelect"
+                                    name="select"
+                                    type="select"
+                                >
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                    <option>
+                                        9
+                                    </option>
+                                    <option>
+                                        10
+                                    </option>
+                                </Input>
+                            </FormGroup>
+                        </MDBCol>
                     </MDBCol>
 
                 </MDBRow>
