@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { useRoom } from '../../Contexts/RoomContext';
 import {
-    MDBTextArea, MDBBtn, MDBContainer, MDBCol, MDBRow, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader,
-    MDBModalTitle, MDBModalBody, MDBModalFooter,
+    MDBBtn, MDBContainer, MDBCol, MDBRow, MDBModal, MDBModalDialog, MDBModalContent, MDBModalHeader,
+    MDBModalTitle, MDBModalBody, MDBModalFooter
 } from 'mdb-react-ui-kit';
+import { FormGroup, Label, Input } from 'reactstrap';
 import axios from "axios";
 
 
 function GiveOrder() {
     const { id } = useParams();
-    const { order, setOrder } = useRoom();
+    const { setOrder } = useRoom();
     const [scrollableModal, setScrollableModal] = useState(false);
     const { getDataFromMongo } = useRoom();
+
+
 
 
 
@@ -52,14 +55,81 @@ function GiveOrder() {
     return (
         <div id='give-order'>
             {/* Header */}
-            <div className='p-5 text-center bg-success text-white mb-5'>
-                <div className="d-flex justify-content-start mb-3"><h2 className='text-left'>Toplantı Odası {id}</h2></div>
+            <div className='p-3 text-center bg-success text-white mb-5'>
+                <div className="d-flex justify-content-start mb-3"><h2 className='text-left'>Toplantı Odası: {id}</h2></div>
                 <h3 className='mb-3'>Siparişlerinizi aşağıda yer alan forma girerek iletebilirsiniz.</h3>
                 <h6 className='mb-3'>(Sipariş listenizi doldurduktan sonra 'Sipariş Ver' butonuna tıklayınız.)</h6>
             </div>
 
-            {/* Sipariş alınan input alanı */}
+            {/* Sipariş seçim alanı */}
             <MDBContainer breakpoint="md">
+                <MDBRow >
+                    <MDBCol size='md-4'>
+                        <MDBRow className=''>
+                            <MDBCol size='md-8'>
+                                <img
+                                    src='https://www.foodandwine.com/thmb/6wTm7a0y87X97LK-ZMxe2787kI8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/different-types-of-tea-FT-BLOG0621-7c7fd231e66d4fea8ca9a47cad52ba79.jpg'
+                                    className='img-thumbnail thumbnails'
+                                    alt='tea'
+                                />
+
+
+                            </MDBCol>
+                            <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                                <FormGroup>
+                                    <Input
+                                        id="exampleSelect"
+                                        name="select"
+                                        type="select"
+                                    >
+                                        <option>
+                                            1
+                                        </option>
+                                        <option>
+                                            2
+                                        </option>
+                                        <option>
+                                            3
+                                        </option>
+                                        <option>
+                                            4
+                                        </option>
+                                        <option>
+                                            5
+                                        </option>
+                                        <option>
+                                            6
+                                        </option>
+                                        <option>
+                                            7
+                                        </option>
+                                        <option>
+                                            8
+                                        </option>
+                                        <option>
+                                            9
+                                        </option>
+                                        <option>
+                                            10
+                                        </option>
+                                    </Input>
+                                </FormGroup>
+                            </MDBCol>
+                        </MDBRow>
+                    </MDBCol>
+
+                </MDBRow>
+
+                {/* Submit Butonu */}
+                <MDBRow className='d-flex justify-content-center'>
+                    <MDBCol size='md-3 text-center'>
+                        <MDBBtn className='mt-3' id='room-order-button' type="submit" onClick={sendOrderToModal} >Sipariş Ver</MDBBtn>
+                    </MDBCol>
+                </MDBRow>
+            </MDBContainer>
+
+            {/* Sipariş alınan input alanı */}
+            {/* <MDBContainer breakpoint="md">
                 <MDBRow className='d-flex justify-content-center'>
                     <MDBCol size='md-6'>
                         <MDBTextArea label='Siparişlerinizi Giriniz' id='textAreaExample' rows={4} />
@@ -70,7 +140,7 @@ function GiveOrder() {
                         <MDBBtn className='mt-3' id='room-order-button' type="submit" onClick={sendOrderToModal} >Sipariş Ver</MDBBtn>
                     </MDBCol>
                 </MDBRow>
-            </MDBContainer>
+            </MDBContainer> */}
 
 
             {/* Modal */}

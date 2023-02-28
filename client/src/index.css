@@ -37,15 +37,20 @@ body > #root > div > #home-page-container {
 .meeting-rooms:hover{
   background-color: #14A44D;
   color: white;
-  
 }
 
 .meeting-rooms{
-  
   background-color:thistle;
   color: black;
+  text-decoration: none;
   font-family:'Times New Roman', Times, serif ;
-  
+}
+
+.meeting-links{
+  color:unset;
+}
+.meeting-links:hover{
+  color:white;
 }
 
 @media screen and (max-width: 580px ) {
@@ -79,21 +84,4 @@ body > #root > div > #home-page-container {
 #order-list-item:hover{
   background-color: #14A44D;
   color: white;
-}
-
-@media screen and (max-width: 995px) {
-  .responsive-text{
-    font-size:150%;
-  }
-}
-@media screen and (min-width:768px) and (max-width: 992px) {
-  .responsive-text{
-    font-size:150%;
-  }
-}
-
-@media screen and (min-width:576px) and (max-width: 767px) {
-  .responsive-text{
-    font-size:110%;
-  }
 }

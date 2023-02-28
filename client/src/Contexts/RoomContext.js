@@ -8,7 +8,6 @@ export const RoomContextProvider = ({ children }) => {
 
     // Order değişkeni şöyle {roomId: id, order: order} şeklinde bi obje olucak
     const [order, setOrder] = useState([]);
-    const [flag, setFlag] = useState(false);
 
 
     // Veritabanındaki verileri alıp order state'ine ata
@@ -34,8 +33,6 @@ export const RoomContextProvider = ({ children }) => {
         order,
         setOrder,
         getDataFromMongo,
-        flag,
-        setFlag,
     }
 
     return (
