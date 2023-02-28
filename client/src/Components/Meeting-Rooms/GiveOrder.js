@@ -53,7 +53,7 @@ function GiveOrder() {
 
 
     return (
-        <div id='give-order'>
+        <div id='give-order' className='pb-5'>
             {/* Header */}
             <div className='p-3 text-center bg-success text-white mb-5'>
                 <div className="d-flex justify-content-start mb-3"><h2 className='text-left'>Toplantı Odası: {id}</h2></div>
@@ -72,9 +72,219 @@ function GiveOrder() {
                                 alt='tea'
                             />
                         </MDBCol>
-
                         <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
-                            <FormGroup>
+                            <FormGroup className='text-center'>
+                                <Label for="exampleSelect">
+                                    Çay
+                                </Label>
+                                <Input
+                                    id="exampleSelect"
+                                    name="select"
+                                    type="select"
+                                >
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                    <option>
+                                        9
+                                    </option>
+                                    <option>
+                                        10
+                                    </option>
+                                </Input>
+                            </FormGroup>
+                        </MDBCol>
+                    </MDBCol>
+                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
+                        <MDBCol size='md-8' className='mb-2'>
+                            <img
+                                src='https://i.lezzet.com.tr/images-xxlarge-secondary/filtre-kahve-yanina-ne-gider-736bcfb7-3cb2-4f5c-b634-7c14b5aba40f'
+                                className='img-thumbnail thumbnails'
+                                alt='filtre kahve'
+                            />
+                        </MDBCol>
+                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                            <FormGroup className='text-center'>
+                                <Label for="exampleSelect">
+                                    Filtre Kahve
+                                </Label>
+                                <Input
+                                    id="exampleSelect"
+                                    name="select"
+                                    type="select"
+                                >
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                    <option>
+                                        9
+                                    </option>
+                                    <option>
+                                        10
+                                    </option>
+                                </Input>
+                            </FormGroup>
+                        </MDBCol>
+                    </MDBCol>
+                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
+                        <MDBCol size='md-8' className='mb-2'>
+                            <img
+                                src='https://coffeetropic.com/wp-content/uploads/2020/06/latte.jpg'
+                                className='img-thumbnail thumbnails'
+                                alt='sütlü kahve'
+                            />
+                        </MDBCol>
+                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                            <FormGroup className='text-center'>
+                                <Label for="exampleSelect">
+                                    Sütlü Kahve
+                                </Label>
+                                <Input
+                                    id="exampleSelect"
+                                    name="select"
+                                    type="select"
+                                >
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                    <option>
+                                        9
+                                    </option>
+                                    <option>
+                                        10
+                                    </option>
+                                </Input>
+                            </FormGroup>
+                        </MDBCol>
+                    </MDBCol>
+                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
+                        <MDBCol size='md-8' className='mb-2'>
+                            <img
+                                src='https://blog.ofix.com/wp-content/uploads/2018/11/iyi_bir_nescafe_hazirlamanin_puf_noktalari_ofix_blog_3.jpg'
+                                className='img-thumbnail thumbnails'
+                                alt='nescafe'
+                            />
+                        </MDBCol>
+                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                            <FormGroup className='text-center'>
+                                <Label for="exampleSelect">
+                                    Nescafe
+                                </Label>
+                                <Input
+                                    id="exampleSelect"
+                                    name="select"
+                                    type="select"
+                                >
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                    <option>
+                                        9
+                                    </option>
+                                    <option>
+                                        10
+                                    </option>
+                                </Input>
+                            </FormGroup>
+                        </MDBCol>
+                    </MDBCol>
+                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
+                        <MDBCol size='md-8' className='mb-2'>
+                            <img
+                                src='https://www.acibadem.com.tr/hayat/Images/YayinMakaleler/bol-su-icmek-neden-onemli_2041_1.jpg'
+                                className='img-thumbnail thumbnails'
+                                alt='su'
+                            />
+                        </MDBCol>
+                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
+                            <FormGroup className='text-center'>
+                                <Label for="exampleSelect">
+                                    Su
+                                </Label>
                                 <Input
                                     id="exampleSelect"
                                     name="select"
@@ -118,7 +328,7 @@ function GiveOrder() {
                 </MDBRow>
 
                 {/* Submit Butonu */}
-                <MDBRow className='d-flex justify-content-center'>
+                <MDBRow className='d-flex justify-content-center pb-5'>
                     <MDBCol size='md-3 text-center'>
                         <MDBBtn className='mt-3' id='room-order-button' type="submit" onClick={sendOrderToModal} >Sipariş Ver</MDBBtn>
                     </MDBCol>
