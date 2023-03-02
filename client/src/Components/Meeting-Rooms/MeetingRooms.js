@@ -5,7 +5,7 @@ function MeetingRooms() {
     return (
         <div id='home-page-container' className="border d-flex align-items-center justify-content-center">
             <MDBContainer breakpoint="md">
-                <h1 className='text-center mb-5 text-danger'>Toplantı Odası Seçin</h1>
+                <h1 className='text-center mb-5 text-success'>Toplantı Odası Seçin</h1>
                 <MDBRow center className='text-center'>
                     <MDBCol size='sm-3' className='me-4 mb-1 '>
                         <a href="/meeting-rooms/Tesla" className='square rounded meeting-rooms d-flex align-items-center justify-content-center meeting-links' >

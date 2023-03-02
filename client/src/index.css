@@ -7,6 +7,10 @@ body {
 body > #root > div > #home-page-container {
   height: 100vh;
 }
+html{
+  background-color:antiquewhite;
+  height: 100vh;
+}
 
 @media screen and (min-width: 580px) {
   #home-page-container{
