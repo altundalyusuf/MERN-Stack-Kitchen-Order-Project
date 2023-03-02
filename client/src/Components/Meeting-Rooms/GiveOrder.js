@@ -102,7 +102,7 @@ function GiveOrder() {
             {/* Header */}
             <div className='p-3 text-center bg-success text-white mb-5'>
                 <div className="d-flex justify-content-start mb-3"><h2 className='text-left'>Toplantı Odası: {id}</h2></div>
-                <h3 className='mb-3'>Siparişlerinizi aşağıda yer alan forma girerek iletebilirsiniz.</h3>
+                <h3 className='mb-3'>Siparişlerinizi ilgili alanlardan seçerek iletebilirsiniz.</h3>
                 <h6 className='mb-3'>(Sipariş listenizi doldurduktan sonra 'Sipariş Ver' butonuna tıklayınız.)</h6>
             </div>
 
