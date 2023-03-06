@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-// mongoose tarih ve saati UTC olarak kaydettiği için bulunulan konumun bölge saatine göre ayarladım
-let current = new Date();
-const timeStamp = new Date(Date.UTC(current.getFullYear(),
-    current.getMonth(), current.getDate(), current.getHours(),
-    current.getMinutes(), current.getSeconds(), current.getMilliseconds()));
+// Güncel tarih ve saati aldığım kısım
+let currentDate = new Date().toLocaleDateString()
+let currentTime = new Date()
+var time = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+
 
 const orderSchema = new mongoose.Schema({
     roomID: { type: String, required: true },
     order: { type: Array, required: true },
-    date: { type: Date, default: timeStamp },
+    date: { type: String, default: currentDate },
+    time: { type: String, default: time },
     active: { type: Boolean, default: true }
 });
 

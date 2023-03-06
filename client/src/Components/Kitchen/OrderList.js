@@ -24,6 +24,12 @@ function OrderList({ value }) {
     const completeOrder = () => {
         handleSubmit(value)
     }
+    // console.log(value.date)
+    let today = new Date()
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    console.log(time)
+
+
 
     return (
         <div>
@@ -32,6 +38,8 @@ function OrderList({ value }) {
                     <div className='d-flex align-items-center'>
                         <div className='ms-3'>
                             <p className='fw-bold mb-1' >Toplantı odası: {value.roomID}</p>
+                            <p>{value.date}</p>
+                            <p>{value.time}</p>
                             <p className='mb-0'>{value.order}</p>
                         </div>
                     </div>
