@@ -61,7 +61,7 @@ html{
   #give-order{
     height: 100vh;
     background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
-    background-position:left bottom;
+    background-position:right bottom;
     background-size:8em;
     background-repeat:no-repeat;
     background-color:antiquewhite;
@@ -73,7 +73,7 @@ html{
   #give-order{
     height: 100vh;
     background-image: url('https://static.tildacdn.com/tild3363-3234-4763-b662-326635373032/NGN_LOGO-02.png') ;
-    background-position:left bottom;
+    background-position: 85% 100%;
     background-size:12em;
     background-repeat:no-repeat;
     background-color:antiquewhite;

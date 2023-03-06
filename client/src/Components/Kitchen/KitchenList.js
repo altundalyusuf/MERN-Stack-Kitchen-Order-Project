@@ -8,11 +8,11 @@ function KitchenList() {
     const { order } = useRoom();
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            console.log('This will run every 5 second!');
-            window.location.reload(true);
-        }, 60000);
-        return () => clearInterval(interval);
+        // const interval = setInterval(() => {
+        //     console.log('This will run every 5 second!');
+        //     window.location.reload(true);
+        // }, 60000);
+        // return () => clearInterval(interval);
     }, []);
 
 

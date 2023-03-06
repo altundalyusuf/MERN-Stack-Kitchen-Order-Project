@@ -11,9 +11,8 @@ import axios from "axios";
 
 function GiveOrder() {
     const { id } = useParams();
-    const { order, setOrder } = useRoom();
+    const { setOrder, getDataFromMongo } = useRoom();
     const [scrollableModal, setScrollableModal] = useState(false);
-    const { getDataFromMongo } = useRoom();
 
     // Select input değerlerini sıfırla
     const resetValues = () => {
@@ -32,7 +31,8 @@ function GiveOrder() {
         setScrollableModal(!setScrollableModal)
         const inputValues = getInput();
         if (inputValues.length > 0) {
-            setOrder((prev) => ([...prev, { roomID: id, order: inputValues }]));
+            // Bu satıra gerek yok sanırım çünkü handleSubmit içinde mongodan veri alırken zaten setOrder yapıyorum
+            // setOrder((prev) => ([...prev, { roomID: id, order: inputValues }]));
             handleSubmit({ roomID: id, order: inputValues })
         }
         resetModalContent();
@@ -54,14 +54,16 @@ function GiveOrder() {
         }
     }
 
+
+
+
     const getInput = () => {
         const teaInput = document.getElementById('teaInput')
         const filterCoffeeInput = document.getElementById('filterCoffeeInput')
         const milkCoffeeInput = document.getElementById('milkCoffeeInput')
         const nescafeInput = document.getElementById('nescafeInput')
         const waterInput = document.getElementById('waterInput')
-        const sugarInput = document.getElementById('sugarInput')
-        const inputs = [teaInput, filterCoffeeInput, milkCoffeeInput, nescafeInput, waterInput, sugarInput]
+        const inputs = [teaInput, filterCoffeeInput, milkCoffeeInput, nescafeInput, waterInput]
 
         let selectedInput = ``
         inputs.forEach((input) => {
@@ -384,54 +386,6 @@ function GiveOrder() {
                             </FormGroup>
                         </MDBCol>
                     </MDBCol>
-                    <MDBCol size='md-4' className='d-flex justify-content-center align-items-center flex-column'>
-                        <MDBCol size='md-8' className='mb-2'>
-                            <img
-                                src='https://i.fanatik.com.tr/i/fanatik/75/0x410/62827e9d45d2a051587e4c0e.jpg'
-                                className='img-thumbnail thumbnails'
-                                alt='şeker'
-                            />
-                        </MDBCol>
-                        <MDBCol size='md-4' className='d-flex justify-content-center align-items-center'>
-                            <FormGroup className='text-center'>
-                                <Label for="exampleSelect" id='sugarLabel'>
-                                    Şeker
-                                </Label>
-                                <Input
-                                    id="sugarInput"
-                                    name="select"
-                                    type="select"
-                                >
-                                    <option>
-                                        0
-                                    </option>
-                                    <option>
-                                        1
-                                    </option>
-                                    <option>
-                                        2
-                                    </option>
-                                    <option>
-                                        3
-                                    </option>
-                                    <option>
-                                        5
-                                    </option>
-                                    <option>
-                                        10
-                                    </option>
-                                    <option>
-                                        15
-                                    </option>
-                                    <option>
-                                        20
-                                    </option>
-
-                                </Input>
-                            </FormGroup>
-                        </MDBCol>
-                    </MDBCol>
-
                 </MDBRow>
 
                 {/* Submit Butonu */}
