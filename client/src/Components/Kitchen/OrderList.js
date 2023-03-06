@@ -10,7 +10,7 @@ function OrderList({ value }) {
     const handleSubmit = async (data) => {
         try {
             const url = `http://localhost:8080/kitchen-list`;
-            const { data: res } = await axios.post(url, data);
+            const { data: res } = await axios.put(url, data);
             console.log(res.message);
             getDataFromMongo();
         } catch (error) {

@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const { Order } = require("../models/order");
 
-router.post("/", async (req, res) => {
+router.put("/", async (req, res) => {
     try {
-        await Order.deleteOne({ roomID: req.body.roomID, order: req.body.order });
-        res.status(201).send({ message: "Order DELETED successfully." })
+        await Order.findOneAndUpdate({ roomID: req.body.roomID, order: req.body.order }, { active: false }, { new: true });
+        res.status(201).send({ message: "Order completed and made passive in DB." })
 
     } catch (error) {
         res.status(500).send({ message: "Internal Server Error" });
