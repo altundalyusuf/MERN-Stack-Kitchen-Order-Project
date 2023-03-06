@@ -11,7 +11,7 @@ import axios from "axios";
 
 function GiveOrder() {
     const { id } = useParams();
-    const { setOrder, getDataFromMongo } = useRoom();
+    const { getDataFromMongo } = useRoom();
     const [scrollableModal, setScrollableModal] = useState(false);
 
     // Select input değerlerini sıfırla
@@ -393,6 +393,7 @@ function GiveOrder() {
                     <MDBCol size='md-3 text-center'>
                         <MDBBtn className='mt-3' id='room-order-button' type="submit" onClick={sendOrderToModal} >Sipariş Ver</MDBBtn>
                     </MDBCol>
+                    <div>&copy; copyright: Yusuf Altundal</div>
                 </MDBRow>
             </MDBContainer>
 

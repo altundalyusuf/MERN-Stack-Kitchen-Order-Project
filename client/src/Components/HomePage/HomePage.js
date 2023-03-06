@@ -7,7 +7,7 @@ function HomePage() {
     return (
         <div id='home-page-container' className="border d-flex align-items-center justify-content-center">
             <MDBContainer breakpoint="md">
-                <MDBRow center>
+                <MDBRow center className='mt-5'>
                     <MDBCol size='5' className='me-4'>
                         <MDBCard>
                             <MDBCardImage
@@ -33,6 +33,9 @@ function HomePage() {
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
+                </MDBRow>
+                <MDBRow className='text-center mt-5'>
+                    <div>&copy; copyright: Yusuf Altundal</div>
                 </MDBRow>
             </MDBContainer>
         </div>

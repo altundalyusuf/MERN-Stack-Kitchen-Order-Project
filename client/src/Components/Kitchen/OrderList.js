@@ -31,7 +31,7 @@ function OrderList({ value }) {
                 <MDBListGroupItem className='d-flex justify-content-between align-items-center mb-1 ' id='order-list-item'>
                     <div className='d-flex align-items-center'>
                         <div className='ms-3'>
-                            <p className='fw-bold mb-1' >Toplantı odası {value.roomID}</p>
+                            <p className='fw-bold mb-1' >Toplantı odası: {value.roomID}</p>
                             <p className='mb-0'>{value.order}</p>
                         </div>
                     </div>

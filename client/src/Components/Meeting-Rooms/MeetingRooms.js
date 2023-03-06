@@ -57,6 +57,10 @@ function MeetingRooms() {
                         </a>
                     </MDBCol>
                 </MDBRow>
+
+                <MDBRow center className='text-center mt-5'>
+                    <div>&copy; copyright: Yusuf Altundal</div>
+                </MDBRow>
             </MDBContainer>
         </div>
     )
