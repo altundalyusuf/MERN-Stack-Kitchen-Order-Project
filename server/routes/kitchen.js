@@ -3,7 +3,7 @@ const { Order } = require("../models/order");
 
 router.put("/", async (req, res) => {
     try {
-        await Order.findOneAndUpdate({ roomID: req.body.roomID, order: req.body.order }, { active: false }, { new: true });
+        await Order.findOneAndUpdate({ roomID: req.body.roomID, order: req.body.order, date: req.body.date, time: req.body.time }, { active: false }, { new: true });
         res.status(201).send({ message: "Order completed and made passive in DB." })
 
     } catch (error) {

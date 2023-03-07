@@ -24,13 +24,6 @@ function OrderList({ value }) {
         handleSubmit(value)
     }
 
-    const time = () => {
-        let dateTime = value.date
-        let t = dateTime.indexOf('T')
-        let z = dateTime.indexOf('Z')
-        let time = dateTime.slice(t + 1, z - 4)
-        return time
-    }
     return (
         <div>
             <MDBListGroup style={{ minWidth: '22rem' }} light >
