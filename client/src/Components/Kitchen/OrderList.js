@@ -20,27 +20,32 @@ function OrderList({ value }) {
         }
     }
 
-
     const completeOrder = () => {
         handleSubmit(value)
     }
-    // console.log(value.date)
-    let today = new Date()
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    console.log(time)
 
-
-
+    const time = () => {
+        let dateTime = value.date
+        let t = dateTime.indexOf('T')
+        let z = dateTime.indexOf('Z')
+        let time = dateTime.slice(t + 1, z - 4)
+        return time
+    }
     return (
         <div>
             <MDBListGroup style={{ minWidth: '22rem' }} light >
                 <MDBListGroupItem className='d-flex justify-content-between align-items-center mb-1 ' id='order-list-item'>
                     <div className='d-flex align-items-center'>
                         <div className='ms-3'>
-                            <p className='fw-bold mb-1' >Toplantı odası: {value.roomID}</p>
-                            <p>{value.date}</p>
-                            <p>{value.time}</p>
-                            <p className='mb-0'>{value.order}</p>
+                            <p className='fw-bold mb-1' >Toplantı odası: {value.roomID}
+                                <span className='fw-normal d-block'>Sipariş zamanı: {value.time}</span>
+                            </p>
+                            <hr className='m-0 mb-1' />
+                            {
+                                value.order.map((item, index) => (
+                                    <p key={index} className='mb-0'>{item}</p>
+                                ))
+                            }
                         </div>
                     </div>
 

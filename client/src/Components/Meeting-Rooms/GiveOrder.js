@@ -27,13 +27,24 @@ function GiveOrder() {
         modalContent.innerHTML = "";
     }
 
+    // Siparişin oluşturulma anı
+    const currentDate = () => {
+        let currentDate = new Date().toLocaleDateString()
+        let currentTime = new Date()
+        let time = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+        return { currentDate, time }
+    }
+
     const submitOrder = () => {
         setScrollableModal(!setScrollableModal)
         const inputValues = getInput();
         if (inputValues.length > 0) {
             // Bu satıra gerek yok sanırım çünkü handleSubmit içinde mongodan veri alırken zaten setOrder yapıyorum
             // setOrder((prev) => ([...prev, { roomID: id, order: inputValues }]));
-            handleSubmit({ roomID: id, order: inputValues })
+
+            // Siparişin oluşturulma anı
+            const date = currentDate();
+            handleSubmit({ roomID: id, order: inputValues, date: date.currentDate, time: date.time })
         }
         resetModalContent();
         resetValues();

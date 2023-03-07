@@ -1,17 +1,12 @@
 const mongoose = require('mongoose');
 const Joi = require('joi');
 
-// Güncel tarih ve saati aldığım kısım
-let currentDate = new Date().toLocaleDateString()
-let currentTime = new Date()
-var time = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
-
 
 const orderSchema = new mongoose.Schema({
     roomID: { type: String, required: true },
     order: { type: Array, required: true },
-    date: { type: String, default: currentDate },
-    time: { type: String, default: time },
+    date: { type: String, required: true },
+    time: { type: String, required: true },
     active: { type: Boolean, default: true }
 });
 
@@ -21,6 +16,8 @@ const validate = (data) => {
     const schema = Joi.object({
         roomID: Joi.string().required().label("room id"),
         order: Joi.array().required().label("order"),
+        date: Joi.string().required().label("date"),
+        time: Joi.string().required().label("time"),
     })
     return schema.validate(data)
 };
