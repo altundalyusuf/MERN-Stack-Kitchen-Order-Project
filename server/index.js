@@ -6,7 +6,6 @@ const connection = require("./db");
 const orderRoutes = require('./routes/order');
 const kitchenRoutes = require('./routes/kitchen');
 const contextRoutes = require('./routes/context');
-// const dbUpdateRoutes = require('./routes/mongoListener');
 
 // database connection
 connection();
@@ -19,7 +18,6 @@ app.use(cors());
 app.use("/meeting-rooms/:id", orderRoutes);
 app.use("/kitchen-list", kitchenRoutes);
 app.use("/context", contextRoutes);
-// app.use("/db-update", dbUpdateRoutes);
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`))
