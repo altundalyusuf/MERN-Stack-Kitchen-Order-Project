@@ -1,6 +1,6 @@
 # Kitchen-Order-Project-with-React
 
-In this project, I created a kitchen - order syste with MERN Stack, MDBBootstrap, Reactstrap and Bootstrap. 
+In this project, I created a kitchen - order system with MERN Stack, MDBBootstrap, Reactstrap and Bootstrap. 
 
 You can choose your meeting room and then give orders with select - options. Orders will be saved in mongoDB with room info, creation time & date and activeness info. 
 
